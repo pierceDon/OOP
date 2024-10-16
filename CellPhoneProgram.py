@@ -3,18 +3,14 @@ import CellPhoneClass as cp
 def main():
 
     
-    arg1 = str(input('Enter your cell phone brand: '))
-    arg2 = str(input('Enter your cell phone model: '))
-    arg3 = float(input('Enter your cell phone price: '))
+    phone1 = cp.CellPhone('Apple','iPhone 16', 1650)
+    phone2 = cp.CellPhone('Samsung', 'Galaxy 10', 1450)
     
-    my_phone = cp.CellPhone(arg1, arg2, arg3)
-    
-    brand = my_phone.set_manufact()
-    model = my_phone.set_model()
-    price = my_phone.set_retail_price()
 
-    phone_model_price = print(f'''
-    You are using a(n) {brand} {model}, which is
-    a ${price} phone!''')
+    phone1.set_retail_price(1250)
+    phone2.set_retail_price(1050)
+
+    print(phone1)
+    print(phone2)
 
 main()
